@@ -1,15 +1,21 @@
 import React from "react";
-import { Form, TextInput } from "react-native";
-import { Container } from "./styles";
+import { MaterialIcons } from "@expo/vector-icons";
+
+import { Container, Form, Input, SubmitButton } from "./styles";
 
 export default function Main() {
   return (
     <Container>
-      <TextInput
-        autoCorrect={false}
-        autoCapitalize="none"
-        placeholder="Add user"
-      />
+      <Form>
+        <Input
+          autoCorrect={false}
+          autoCapitalize="none"
+          placeholder="Add user"
+        />
+        <SubmitButton>
+          <MaterialIcons name="add" size={20} color="#FFF" />
+        </SubmitButton>
+      </Form>
     </Container>
   );
 }
